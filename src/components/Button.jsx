@@ -2,7 +2,7 @@ import './Button.css'
 
 
 const Button = (props) => {
-    const { title, description } = props.language;
+    const { title } = props.language; // destructuring to extract title from language attribute 
 
     return (
         <>

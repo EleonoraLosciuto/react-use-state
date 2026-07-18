@@ -11,10 +11,17 @@ h1 {
 }
 
 .description-card {
+    display: none;
+    /*display none when view class is not present (initially)*/
     margin: 0 3rem;
     border: 1px solid lightgrey;
     border-radius: 10px;
 
+}
+
+.view {
+    /*view: display block to show card after user clicks on one button*/
+    display: block;
 }
 
 .description-card p,

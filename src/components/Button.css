@@ -1,3 +1,4 @@
+/* Style for all buttons */
 .web-languages button {
     padding: 1.2rem;
     font-size: large;
@@ -6,9 +7,17 @@
     font-weight: 600;
     border: none;
     border-radius: 10px;
+    transition: 0.4s ease-out;
 }
 
+/*Change background and color for active button*/
 .web-languages button.active {
     background-color: yellow;
     color: black;
+}
+
+/*buttons hover effects*/
+.web-languages button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
