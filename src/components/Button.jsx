@@ -6,7 +6,7 @@ const Button = (props) => {
 
     return (
         <>
-            <button>
+            <button onClick={props.onClickCustom} className={props.open ? "active" : undefined}>
                 {title}
             </button>
         </>

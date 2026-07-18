@@ -9,13 +9,17 @@ function App() {
   return (
     <>
       <h1>Learn Web Development</h1>
-      <div className="web-languages">
-        {languages.map((language) => (
-          <Button key={language.id} language={language} />
-        )
 
-        )
-        }
+      <div className="web-languages">
+        {
+          languages.map(
+            (language) => {
+              const isActive = language === active;
+
+              return (
+                <Button onClickCustom={() => setActive(language)} open={isActive} key={language.id} language={language} />
+              )
+            })}
       </div>
     </>
   )
