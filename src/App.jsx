@@ -21,6 +21,10 @@ function App() {
               )
             })}
       </div>
+      <div className="description-card">
+        <h2>{active.title}</h2>
+        <p>{active.description}</p>
+      </div>
     </>
   )
 }
