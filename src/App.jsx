@@ -2,15 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import languages from './assets/languages.js'
 import Button from './components/Button.jsx'
+import DescriptionCard from './components/DescriptionCard.jsx'
 
 function App() {
-  const [active, setActive] = useState(0); //useState is initially set as 0 in order to not display any description-card and let user decide where to start
-  const classList = [ // classList is used to display / not display the description card
-    "description-card",
-    active === 0
-      ? undefined
-      : "view"
-  ]
+  const [active, setActive] = useState(null); // useState initially set as null in order to not show DescriptionCard
 
   return (
     <>
@@ -30,12 +25,8 @@ function App() {
               )
             })}
       </div>
+      <DescriptionCard active={active} />
 
-      <div className={classList.join(" ") // join method in className to add "view" class after first click of user
-      }>
-        <h2>{active.title}</h2>
-        <p>{active.description}</p>
-      </div>
     </>
   )
 }
