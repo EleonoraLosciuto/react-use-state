@@ -16,12 +16,12 @@ function App() {
           languages.map(
             (language) => {
 
-              // isActive variable to pass boolean value to child through props - below open attribute on Button component 
+              // isActive variable to pass boolean value to child through props (see below open attribute on Button component)
               const isActive = language === active;
 
-              // note: onClickCustom attribute to pass function to child through props
+              // note: onClick attribute to pass function to child through props
               return (
-                <Button onClickCustom={() => setActive(language)} open={isActive} key={language.id} language={language} />
+                <Button onClick={() => setActive(language)} open={isActive} key={language.id} language={language} />
               )
             })}
       </div>
